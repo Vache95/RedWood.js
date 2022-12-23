@@ -1,24 +1,22 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
-import BlogLayout from 'src/layouts/BlogLayout/BlogLayout'
+import { useEffect } from 'react'
+import './homepage.scss'
 
 const HomePage = () => {
+
+useEffect(()=>{
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
+},[])
+
   return (
     <>
       <MetaTags title="Home" description="Home page" />
-      <BlogLayout>
-      <header>
-        <h1>Redwood Blog</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to={routes.about()}>About</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>Home</main>
-      </BlogLayout>
+      <main>
+        <h1>home</h1>
+      </main>
     </>
   )
 }
