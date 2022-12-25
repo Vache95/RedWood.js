@@ -10,9 +10,12 @@ import {
 } from '@chakra-ui/react'
 import { MetaTags } from '@redwoodjs/web'
 import { useEffect } from 'react'
+// import { useQuery } from '@apollo/client'
 import './homepage.scss'
+// import { All_TODO } from 'src/apollo/todos'
 
 const HomePage = () => {
+  // const { loading, error, data } = useQuery(All_TODO)
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then((response) => response.json())

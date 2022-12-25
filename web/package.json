@@ -12,6 +12,7 @@
       "not IE_Mob 11"
     ]
   },
+
   "dependencies": {
     "@chakra-ui/react": "^1",
     "@emotion/react": "^11",

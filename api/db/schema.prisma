@@ -13,6 +13,13 @@ generator client {
 // TODO: Please remove the following example:
 model UserExample {
   id    Int     @id @default(autoincrement())
-  email String  @unique
+  email String @unique
   name  String?
+}
+
+model POST {
+  id Int @id default(autoincrement())
+  title String
+  body String
+  createdAt DateTime @default(now())
 }

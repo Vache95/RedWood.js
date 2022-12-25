@@ -8,7 +8,8 @@ import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
 import './index.css'
-
+import { ApolloProvider } from '@apollo/client'
+import client from './apollo/client'
 const extendedTheme = extendTheme({
   components: {
     Button: {
@@ -54,7 +55,9 @@ const App = () => (
       <ColorModeScript />
       <ChakraProvider theme={extendedTheme}>
         <RedwoodApolloProvider>
+        {/* <ApolloProvider client={client}> */}
           <Routes />
+        {/* </ApolloProvider> */}
         </RedwoodApolloProvider>
       </ChakraProvider>
     </RedwoodProvider>
